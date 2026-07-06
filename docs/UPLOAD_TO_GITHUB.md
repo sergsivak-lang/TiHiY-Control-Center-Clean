@@ -1,10 +1,9 @@
-# Upload guide
+# Upload
 
-1. Extract the ZIP.
-2. Open your empty GitHub repository.
-3. Click **Add file → Upload files**.
-4. Drag all files and folders from the extracted folder.
-5. Commit changes.
-6. Go to **Actions**.
-7. Open **Build Windows Portable**.
-8. Click **Run workflow**.
+1. Extract ZIP.
+2. Upload the contents to GitHub, not the ZIP.
+3. Confirm these files exist:
+   - `.github/workflows/build-windows.yml`
+   - `src/TiHiY.ControlCenter/TiHiY.ControlCenter.csproj`
+   - `src/TiHiY.ControlCenter/Program.cs`
+4. Run Actions → Build Windows Portable.
