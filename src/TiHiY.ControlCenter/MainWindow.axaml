@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TiHiY.ControlCenter.MainWindow"
+        Title="TiHiY Control Center"
+        Width="1100" Height="720"
+        MinWidth="900" MinHeight="600">
+  <Grid RowDefinitions="Auto,*" Background="#0f172a">
+    <Border Grid.Row="0" Background="#111827" Padding="16">
+      <StackPanel Orientation="Horizontal" Spacing="12">
+        <TextBlock Text="TiHiY Control Center" FontSize="24" FontWeight="Bold" Foreground="White" />
+        <TextBlock Text="v0.1 Clean" FontSize="14" VerticalAlignment="Center" Foreground="#93c5fd" />
+      </StackPanel>
+    </Border>
+
+    <Grid Grid.Row="1" ColumnDefinitions="300,*" Margin="16" ColumnSpacing="16">
+      <Border Grid.Column="0" Background="#111827" CornerRadius="12" Padding="16">
+        <StackPanel Spacing="12">
+          <TextBlock Text="XML Profile" Foreground="White" FontSize="18" FontWeight="SemiBold" />
+          <Button Name="OpenXmlButton" Content="Open XML" Click="OpenXml_Click" />
+          <Button Name="BackupButton" Content="Create Backup" Click="Backup_Click" IsEnabled="False" />
+          <Button Name="ApplyDefaultsButton" Content="Apply TiHiY Defaults" Click="ApplyDefaults_Click" IsEnabled="False" />
+          <Button Name="SaveAsButton" Content="Save As XML" Click="SaveAs_Click" IsEnabled="False" />
+
+          <Separator />
+          <TextBlock Text="Axis Defaults" Foreground="White" FontSize="18" FontWeight="SemiBold" />
+          <TextBlock Text="X/Y Deadzone" Foreground="#cbd5e1" />
+          <TextBox Name="DeadzoneBox" Text="0.018" />
+          <TextBlock Text="X/Y Saturation" Foreground="#cbd5e1" />
+          <TextBox Name="SaturationBox" Text="0.950" />
+          <TextBlock Text="Twist Deadzone" Foreground="#cbd5e1" />
+          <TextBox Name="TwistDeadzoneBox" Text="0.030" />
+          <TextBlock Text="Slider Deadzone" Foreground="#cbd5e1" />
+          <TextBox Name="SliderDeadzoneBox" Text="0.020" />
+        </StackPanel>
+      </Border>
+
+      <Grid Grid.Column="1" RowDefinitions="Auto,*,160" RowSpacing="16">
+        <Border Grid.Row="0" Background="#111827" CornerRadius="12" Padding="16">
+          <StackPanel Spacing="8">
+            <TextBlock Text="Status" Foreground="White" FontSize="18" FontWeight="SemiBold" />
+            <TextBlock Name="StatusText" Text="Open Star Citizen layout XML to begin." Foreground="#cbd5e1" TextWrapping="Wrap" />
+            <TextBlock Name="SummaryText" Text="No file loaded." Foreground="#93c5fd" TextWrapping="Wrap" />
+          </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Background="#111827" CornerRadius="12" Padding="16">
+          <Grid RowDefinitions="Auto,*">
+            <TextBlock Text="Detected Bindings / Device Options" Foreground="White" FontSize="18" FontWeight="SemiBold" />
+            <TextBox Grid.Row="1" Name="BindingsText" IsReadOnly="True" AcceptsReturn="True" TextWrapping="NoWrap" FontFamily="Consolas" />
+          </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Background="#111827" CornerRadius="12" Padding="16">
+          <Grid RowDefinitions="Auto,*">
+            <TextBlock Text="Log" Foreground="White" FontSize="18" FontWeight="SemiBold" />
+            <TextBox Grid.Row="1" Name="LogText" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" FontFamily="Consolas" />
+          </Grid>
+        </Border>
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>
