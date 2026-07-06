@@ -1,7 +1,12 @@
 # Changelog
 
-## v0.1 FIX
-- Added real .NET 8 Windows Forms project.
-- Added real `.csproj` and `.sln`.
-- Added GitHub Actions workflow.
-- Added original XML/FCF profiles.
+## v0.2
+- Added real XML open/read/save logic.
+- Added axis Deadzone/Saturation editor.
+- Added binds table.
+- Added empty js1_ counter.
+- Added backup creation.
+- Added TiHiY HOSAM defaults.
+
+## v0.1
+- First working WinForms shell.

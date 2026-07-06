@@ -1,15 +1,21 @@
-# TiHiY Control Center
+# TiHiY Control Center v0.2
 
-Робоча мінімальна версія v0.1 для Star Citizen HOSAM XML.
+Windows WinForms/.NET 8 editor for Star Citizen HOSAM XML profiles.
 
-## Що вміє
-- Відкриває `layout_*.xml`.
-- Показує кількість rebinds, кнопки, HAT і порожні `js1_` бинди.
-- Робить backup XML.
-- Застосовує TiHiY HOSAM defaults для осей.
-- Зберігає новий XML через Save As.
+## v0.2 functions
 
-## GitHub Actions
-Workflow: `.github/workflows/build-windows.yml`
+- Open `layout_*.xml` Star Citizen files.
+- Read T.16000M axis `deadzone` and `saturation` values.
+- Show all action binds in a table.
+- Count empty `js1_` joystick binds.
+- Apply TiHiY HOSAM defaults.
+- Backup original XML.
+- Save new XML as `layout_TiHiY_HOSAM_v0_2.xml`.
 
-Artifacts: `TiHiY-Control-Center-win-x64`
+## GitHub build
+
+Upload all files to the repository, then run:
+
+Actions → Build Windows Portable → Run workflow
+
+Download the artifact `TiHiY-Control-Center-win-x64` and run `TiHiY.ControlCenter.exe`.
