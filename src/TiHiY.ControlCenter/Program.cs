@@ -1,19 +1,11 @@
-using Avalonia;
-using Avalonia.ReactiveUI;
-
 namespace TiHiY.ControlCenter;
 
 internal static class Program
 {
     [STAThread]
-    public static void Main(string[] args)
+    private static void Main()
     {
-        BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
+        ApplicationConfiguration.Initialize();
+        Application.Run(new MainForm());
     }
-
-    public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
-            .UsePlatformDetect()
-            .WithInterFont()
-            .LogToTrace();
 }
