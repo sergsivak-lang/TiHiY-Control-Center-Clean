@@ -1,7 +1,7 @@
 # Changelog
 
-## v0.1
-
-- Initial real WinForms/.NET 8 project.
-- GitHub Actions workflow.
-- XML open, read, backup, default axis tuning, export.
+## v0.1 FIX
+- Added real .NET 8 Windows Forms project.
+- Added real `.csproj` and `.sln`.
+- Added GitHub Actions workflow.
+- Added original XML/FCF profiles.
